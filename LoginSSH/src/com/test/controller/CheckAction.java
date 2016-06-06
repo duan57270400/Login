@@ -16,7 +16,7 @@ public class CheckAction extends ActionSupport{
 	
 
 	/**
-	 * 看看还能不能出现0.0
+	 * 看看还能不能出现
 	 * 
 	 */
 
