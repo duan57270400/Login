@@ -15,7 +15,10 @@ public class CheckAction extends ActionSupport{
 	private LoginService loginService1;
 	
 
-	
+	/**
+	 * ²âÊÔµÄGithub
+	 * @param loginService1
+	 */
 
 	public void setLoginService1(LoginService loginService1) {
 		this.loginService1 = loginService1;
