@@ -16,7 +16,7 @@ public class CheckAction extends ActionSupport{
 	
 
 	/**
-	 * ²âÊÔµÄGithub
+	 * ²âÊÔµÄGithub 223
 	 * @param loginService1
 	 */
 
