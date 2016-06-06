@@ -16,8 +16,7 @@ public class CheckAction extends ActionSupport{
 	
 
 	/**
-	 * 就是啊
-	 * 在测试分支的情况拉拉
+	 * 嗯哼
 	 * 
 	 */
 
