@@ -33,7 +33,7 @@ public class LoginAction extends ActionSupport{
 	private String msg;
 	
 	@Resource(name="inServiceImpl")
-	private InService inServiceImpl;  //测试用接口223
+	private InService inServiceImpl;  //测试用接口
 	
 
 

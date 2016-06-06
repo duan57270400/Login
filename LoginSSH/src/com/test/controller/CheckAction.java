@@ -16,7 +16,7 @@ public class CheckAction extends ActionSupport{
 	
 
 	/**
-	 * 嗯哼223
+	 * 看看还能不能出现
 	 * 
 	 */
 
