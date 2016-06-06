@@ -16,8 +16,8 @@ public class CheckAction extends ActionSupport{
 	
 
 	/**
-	 * 测试的Github 223
-	 * @param loginService1
+	 * 好像可以出现的呢
+	 * 
 	 */
 
 	public void setLoginService1(LoginService loginService1) {
