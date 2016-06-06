@@ -17,7 +17,10 @@ public class PostAction extends ActionSupport{
 	private PostTable postTable;
 	private PageBean pageBean; //封装了分页信息和数据内容的pageBean
 	
-	
+	/**
+	 * 哈罗
+	 * @return
+	 */
 
 	public PageBean getPageBean() {
 		return pageBean;
