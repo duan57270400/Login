@@ -1,2 +1,2 @@
 # Login
-LoginSSH(集体岗)备份。
+LoginSSH(集体岗)备份
