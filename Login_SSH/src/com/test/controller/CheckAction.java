@@ -14,7 +14,7 @@ public class CheckAction extends ActionSupport{
 
 	private LoginService loginService1;
 	/**
-	 * OK吧
+	 * OK吧2222
 	 * @param loginService1
 	 */
 
