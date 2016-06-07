@@ -13,7 +13,10 @@ public class CheckAction extends ActionSupport{
 	private String order_operate;
 
 	private LoginService loginService1;
-	
+	/**
+	 * ≤‚ ‘≥ˆœ÷
+	 * @param loginService1
+	 */
 
 	
 
