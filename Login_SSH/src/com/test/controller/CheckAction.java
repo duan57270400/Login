@@ -14,7 +14,7 @@ public class CheckAction extends ActionSupport{
 
 	private LoginService loginService1;
 	/**
-	 * ²âÊÔ³öÏÖ
+	 * ä¸è¦å‡ºç°å•Šå•Š
 	 * @param loginService1
 	 */
 
@@ -26,7 +26,7 @@ public class CheckAction extends ActionSupport{
 
 
 
-	public String execute(){  //Ä¬ÈÏµÄÖ´ĞĞ·½·¨
+	public String execute(){  //é»˜è®¤çš„æ‰§è¡Œæ–¹æ³•
 
 		return SUCCESS;
 	}
@@ -45,7 +45,7 @@ public class CheckAction extends ActionSupport{
 	{
 		if(null != order_operate && "reg_account".equals(order_operate))
 		{	
-			loginService1.getPostAndDept();  //»ñµÃÈ«²¿µÄ¸ÚÎ»Ãû×Ö
+			loginService1.getPostAndDept();  //è·å¾—å…¨éƒ¨çš„å²—ä½åå­—
      
 			return "reg_account";
 		}
