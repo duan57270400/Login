@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+
+
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value = "com.mysql.jdbc.Driver"></property>
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/test_login?useUnicode=true&amp;characterEncoding=UTF-8">
+		</property>
+		<property name="username" value="root"></property>
+		<property name="password" value=""></property>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+			<value>com/test/vo/UsersTable.hbm.xml</value>	
+			<value>com/test/vo/DeptTable.hbm.xml</value>
+			<value>com/test/vo/UserPost.hbm.xml</value>	
+			<value>com/test/vo/PostFlow.hbm.xml</value>
+			<value>com/test/vo/PostTable.hbm.xml</value>
+			<value>com/test/vo/TaxTable.hbm.xml</value>
+			<value>com/test/vo/CollectiveComments.hbm.xml</value>
+			</list>
+		</property></bean>
+		<bean id="baseDAO" class="com.test.DAO.BaseDAO">
+		<property name="sessionFactory" ref="sessionFactory" ></property>
+		</bean>
+		
+		<bean id="userDAO" class="com.test.DAO.UserDAO">
+			<property name="baseDAO" ref="baseDAO" ></property>
+		</bean>
+		<bean id="postDAO" class="com.test.DAO.PostDAO">
+		 <property name="baseDAO" ref="baseDAO"></property>
+		</bean>
+		<bean id="taxDAO" class="com.test.DAO.TaxDAO">
+		 <property name="baseDAO" ref="baseDAO"></property>
+		</bean>
+		<bean id="loginService1" class="com.test.services.LoginService">	
+		 <property name="userDAO" ref="userDAO"></property>
+		 <property name="postDAO" ref="postDAO"></property>
+		 <property name="taxDAO" ref="taxDAO"></property>
+		</bean>
+		
+			
+	<!-- bean annotation driven -->
+     <context:component-scan base-package="com.test.*"/> 
+	
+     
+		
+</beans>

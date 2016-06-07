@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+<package name="login_test" extends="struts-default">
+
+     <action name="Check" class="com.test.controller.CheckAction" method="checkOperate">
+          <result name="reg_account">/reg.jsp</result>
+          <result name="user_login">/user_login.jsp</result>
+          <result name="users_manager">userspages/users_manage.jsp</result>
+          <result name="post_manage">postpages/post_manage.jsp</result>
+     </action>
+
+        <action name="SecurityCodeImage" class="com.test.controller.SecurityCodeImageAction">
+			<result name="success" type="stream">
+				<param name="contentType">image/jpeg</param>
+				<param name="inputName">imageStream</param>
+				<param name="bufferSize">2048</param>
+			</result>
+		</action>
+
+       <action name="Login_*" class="com.test.controller.LoginAction" method="{1}">
+            <result name="toLeft">/main_left.jsp</result>
+			<result name="reg_success">/reg_success.jsp</result>
+			<result name="reg_error">/error.jsp</result>
+			<result name="yanzheng_error">/yan_error.jsp</result>
+			<result name="login_success">/main.jsp</result>
+			<result name="login_error">/user_login.jsp</result>	
+			<result name="look_user">userspages/look_user.jsp</result>
+			<result name="look_dept">userspages/look_dept.jsp</result>
+		</action>
+		
+		<action name="Post_*" class="com.test.controller.PostAction"  method="{1}">
+		     <result name="add_post">postpages/add_post.jsp</result>
+		     <result name="addPost">postpages/post_success.jsp</result>
+		     <result name="del_post">postpages/del_post.jsp</result>
+		     <result name="delPost">postpages/post_success.jsp</result>
+		     <result name="up_post">postpages/upDatePost.jsp</result>
+		     <result name="upDatePost">postpages/post_success.jsp</result>
+		     <result name="look_post">postpages/look_post.jsp</result>
+		</action>
+		
+		<action name="Tax_*" class="com.test.controller.TaxAction" method="{1}">
+		     <result name="windowsFirst">windowpages/window.jsp</result>
+		     <result name="select_user">windowpages/select_user.jsp</result>
+		     <result name="selectNextUser">windowpages/tax_success.jsp</result>
+		     <result name="businessChoice">windowpages/business_choice.jsp</result>
+		     <result name="businessBrowse">windowpages/business_browse.jsp</result>
+		     <result name="businessUpdate">windowpages/tax_success.jsp</result>
+		     <result name="chiefOperate">windowpages/chief_operate.jsp</result>
+		     <result name="update_collective.jsp">windowpages/update_collective.jsp</result>
+		     <result name="complete">windowpages/complete.jsp</result>
+		     <result name="error">windowpages/alert.jsp</result>
+		</action>
+		
+
+</package>
+</struts>    
